@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faImage } from '@fortawesome/free-solid-svg-icons'
 import uuid from 'react-uuid'
 import Modal from '../components/Modal'
-
+import ReactDOM from 'react-dom'
 
 
 
@@ -148,7 +148,7 @@ export default function Home() {
     }
   }
 
-  return (<>
+    return <>
     <div className="columns is-fullwidth" style={{ "height": "100vh" }}>
       <div className="column has-background-light" style={{ "padding": "25px" }}>
         <div className="container">
@@ -256,7 +256,7 @@ export default function Home() {
         </div>
       </div>
     </div>
-    <Modal isOpen={!spid}></Modal>
+    <Modal isOpen={!spid}/>
   </>
-  )
+  
 }

@@ -40,3 +40,15 @@ a {
 .full-width{
   width: 100%
 }
+
+.expix_wrapper{
+  margin:0;
+  padding:0;
+  top:0;
+  left:0;
+  width:100vw;
+  height:100vh;
+  z-index:1000;
+  background:white;
+  position:absolute;
+}
