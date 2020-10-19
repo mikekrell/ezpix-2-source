@@ -2,13 +2,7 @@ import { useState, useRef } from 'react'
 
 export default function TermsConditions({ isOpen, setDeactivateModal }) {
     const termsCheck = useRef(null)
-    // const [scrollEnd, setScrollEnd] = useState(false);
     const [acceptTerms, setAcceptTerms] = useState(false)
-    // const handleScroll = () => {
-    //     const boundingBoxBounds = boundingBox.current.getBoundingClientRect()
-    //     const endingFooterBounds = endingFooter.current.getBoundingClientRect()
-    //     endingFooterBounds.top < boundingBoxBounds.bottom ? setScrollEnd(true) : null
-    // }
 
     const handleChange = () => {
         setAcceptTerms(termsCheck.current.checked)

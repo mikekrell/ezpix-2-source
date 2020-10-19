@@ -7,8 +7,8 @@ export default function Modal({isOpen}) {
     return (
         <div className={isOpen && !deactivateModal ? "modal is-active mb-5" : "modal mb-5"}>
             <div className="modal-background has-background-dark"></div>
-            <div className="modal-content has-background-white">
-                <div className="container" >
+            <div className="modal-content has-background-white" style={{ 'overflowX': 'hidden' }}>
+                <div className="container">
                     <div className="columns is-centered mt-3 mb-0">
                         <div style={{"textAlign" : "center"}} className="column">
                         <img src="2020 EZPix_Logo.png" width="180"></img>
