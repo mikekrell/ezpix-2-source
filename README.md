@@ -1,3 +1,5 @@
+![screenshot](https://github.com/mikekrell/ezpix-2-source/blob/main/public/screenshot.jpg)
+![screenshot2](https://github.com/mikekrell/ezpix-2-source/blob/main/public/screenshot2.jpg)
 I fun image uploading app I built for a publishing company. Drag and Drop, responive UI. Lots of love and JS.
 ## Getting Started
 
