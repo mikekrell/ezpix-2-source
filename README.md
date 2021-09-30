@@ -1,5 +1,4 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
+I fun image uploading app I built for a publishing company. Drag and Drop, responive UI. Lots of love and JS.
 ## Getting Started
 
 First, run the development server:
