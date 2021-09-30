@@ -150,6 +150,84 @@ export default function Home() {
 
     return <>
     <div className="columns is-fullwidth" style={{ "height": "100vh" }}>
+        <div className="column is-one-quarter pl-5">
+          <div className="container">
+            <div className="column is-fullwidth mt-5">
+              <img src="2020 EZPix_Logo.png" width="180"></img>
+            </div>
+
+            <div className="column is-fullwidth mt-5">
+              <p className="title is-4">Justin Curry Demo High</p>
+              <p className="sub-title is-5 mt-0 pt-0">(Yearbook Project #: 12345)</p>
+            </div>
+            <div className="column is-fullwidth">
+              <form ref={formRef} onSubmit={onSubmit}>
+                <div className="file is-success ">
+                  <label className="file-label">
+                    <input ref={fileInput} multiple className="file-input" type="file" name="file" accept="image/png, image/jpeg" onChange={onChange} />
+                    <span className="file-cta">
+                      <span>
+                        <FontAwesomeIcon icon={faImage} />
+                      </span>
+                      <span className="file-label ml-2">
+                        Select Photos to Upload
+                  </span>
+                    </span>
+                  </label>
+                </div>
+
+                <fieldset className="mt-5">
+                  <legend className="label">Student Info</legend>
+                  <div className="field">
+                    <label >First Name</label>
+                    <div className="control">
+                      <input ref={firstName} className="input" type="text" />
+                    </div>
+                  </div>
+                  <div className="field">
+                    <label >Last Name</label>
+                    <div className="control">
+                      <input ref={lastName} className="input" type="text" />
+                    </div>
+                  </div>
+                  <div className="field mb-3 " >
+                    <label >Grade</label>
+                    <div className="control">
+                      <div className="select">
+                        <select defaultValue="10">
+                          <option>8</option>
+                          <option>9</option>
+                          <option>10</option>
+                          <option>11</option>
+                          <option>12</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+                <fieldset className="mt-5">
+                  <legend className="label">Campaign Info</legend>
+                  <div className="field" >
+                    <label>Title</label>
+                    <div className="control">
+                      <input ref={campaignName} className="input" type="text" />
+                    </div>
+                  </div>
+                </fieldset>
+                <div className="field is-grouped mt-5 ">
+                  <div className="control">
+                    {
+                      loading
+                        ? <button disabled={loading} className="button is-link">Loading...</button>
+                        : <button disabled={thumbnails.length == 0} className="button is-link">Submit</button>
+                    }
+
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
       <div className="column has-background-light" style={{ "padding": "25px" }}>
         <div className="container">
           <TransitionGroup className="columns is-multiline p-5">
@@ -177,84 +255,7 @@ export default function Home() {
         </div>
       </div>
       
-      <div className="column is-one-quarter pl-5">
-        <div className="container">
-          <div className="column is-fullwidth mt-5">
-            <img src="2020 EZPix_Logo.png" width="180"></img>
-          </div>
-          
-          <div className="column is-fullwidth mt-5">
-            <p className="title is-4">Justin Curry Demo High</p>
-            <p className="sub-title is-5 mt-0 pt-0">(Yearbook Project #: 12345)</p>
-          </div>
-          <div className="column is-fullwidth">
-            <form ref={formRef} onSubmit={onSubmit}>
-              <div className="file is-success ">
-                <label className="file-label">
-                  <input ref={fileInput} multiple className="file-input" type="file" name="file" accept="image/png, image/jpeg" onChange={onChange} />
-                  <span className="file-cta">
-                    <span>
-                      <FontAwesomeIcon icon={faImage}/>
-                    </span>
-                    <span className="file-label ml-2">
-                      Select Photos to Upload
-                  </span>
-                  </span>
-                </label>
-              </div>
 
-              <fieldset className="mt-5">
-                <legend className="label">Student Info</legend>
-                <div className="field">
-                <label >First Name</label>
-                <div className="control">
-                  <input ref={firstName} className="input" type="text" />
-                </div>
-              </div>
-                <div className="field">
-                  <label >Last Name</label>
-                  <div className="control">
-                    <input ref={lastName} className="input" type="text" />
-                  </div>
-                </div>
-                <div className="field mb-3 " >
-                  <label >Grade</label>
-                  <div className="control">
-                    <div className="select">
-                      <select defaultValue="10">
-                        <option>8</option>
-                        <option>9</option>
-                        <option>10</option>
-                        <option>11</option>
-                        <option>12</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-              </fieldset>
-              <fieldset className="mt-5">
-              <legend className="label">Campaign Info</legend>
-                <div className="field" >
-                <label>Title</label>
-                <div className="control">
-                  <input ref={campaignName} className="input"  type="text" />
-                </div>
-              </div>
-              </fieldset>
-              <div className="field is-grouped mt-5 ">
-                <div className="control">
-                  {
-                    loading
-                      ? <button disabled={loading} className="button is-link">Loading...</button>
-                      : <button disabled={thumbnails.length == 0} className="button is-link">Submit</button>
-                  }
-
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
     </div>
     <Modal isOpen={!spid}/>
   </>

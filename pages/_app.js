@@ -1,4 +1,5 @@
 import '../styles/globals.css'
+import '../styles/landing.css'
 import 'bulma'
 import EzPix from '../components/EzPix'
 
